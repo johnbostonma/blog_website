@@ -1,0 +1,18 @@
+<%- include partials/header.ejs %>
+
+</header>
+<h1>Home</h1>
+  <%var dots="....."%>
+<p class="trun"><%=StartingContent.substring(0,100) + dots%></p>
+
+<%arrCont.forEach(function(post){%>
+  <h1><%=post.title%></h1>
+
+  <p class="trun"><%=post.content.substring(0,100) + dots%>
+
+    <a href="/arr/<%=post.title%>">Read more</a>
+  </p>
+
+<%})%>
+
+<%-include partials/footer.ejs %>
